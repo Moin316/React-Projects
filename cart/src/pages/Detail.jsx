@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { products } from '../components/Products';
 import { useDispatch } from 'react-redux';
+import { addToCart } from '../store/Cart';
 const Detail = () => {
     const {slug} = useParams();
     const [detail,setDetail] =useState([]);
@@ -25,6 +26,7 @@ const Detail = () => {
         }
     }
     const handleAddToCart=()=>{
+        console.log("Add to cart");
         dispatch(addToCart({
             productId: detail.id,
             quantity:quantity,
@@ -52,6 +54,7 @@ const Detail = () => {
                         Add to Cart
                     </button>
                 </div>
+                <p>{detail.description}</p>
             </div>
         </div>
     </div>

@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <header className='flex justify-between items-center mb-5'>
         <Link to="/" className='text-xl font-semibold'>Home</Link>
-        <div className='w-10 h-10 rounded-full bg-gray-100 flex justify-center items-center relative' onClick={handleOpenTabCart}>
+        <div className='w-10 h-10 rounded-full bg-gray-100 flex justify-center items-center relative cursor-pointer' onClick={handleOpenTabCart}>
             <img src={iconCart} alt='' className='w-6'/>
             <span className='absolute top-2/3 right-1/2 bg-red-500 text-white text-sm w-5 h-5 rounded-full flex items-center justify-center'>{totalQuantity}</span>
         </div>

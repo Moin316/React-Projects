@@ -29,7 +29,8 @@ const CartSlice = createSlice({
       }
       else{
         // delete state.items[indexProductId];
-        state.items.filter(item => item.productId !== productId)
+        console.log("delete product");
+        state.items=state.items.filter(item => item.productId !== productId)
       }
     },
     toggleStatusTab(state) {
